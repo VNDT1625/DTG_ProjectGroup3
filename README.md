@@ -1,4 +1,4 @@
-﻿# AI-NIDS: Real-time Network Intrusion Detection System
+# AI-NIDS: Real-time Network Intrusion Detection System
 ### Hệ thống Phát hiện Xâm nhập Mạng Ứng dụng Học máy Thời gian thực
 
 [![Python Version](https://img.shields.io/badge/Python-3.10%2B-blue.svg?logo=python&logoColor=white)](https://www.python.org/)
@@ -24,11 +24,11 @@ Dự án được thiết kế tuân thủ nghiêm ngặt chuẩn quốc tế **
 
 | STT | Họ và Tên | Chuyên ngành / Vai trò đảm nhiệm | Module phụ trách |
 | :---: | :--- | :--- | :--- |
-| 1 | **Nguyễn Duy Thuận** | Kỹ thuật phần mềm (*Trưởng nhóm*) | Kiến trúc Backend, REST API Gateway, Schema Validation & Tích hợp |
-| 2 | **Dương Hoàng Bảo Long** | Kỹ thuật phần mềm | Giao diện Giám sát Streamlit, Trực quan hóa Plotly & Xuất Báo cáo |
-| 3 | **Văn Đức Cường** | Trí tuệ nhân tạo | Huấn luyện & Đánh giá Mô hình Học máy (XGBoost / Random Forest) |
-| 4 | **Trần Thị Thu Hiền** | Trí tuệ nhân tạo | Pipeline Tiền xử lý, Chuẩn hóa Z-score & Trích chọn Đặc trưng |
-| 5 | **Trần Ngọc Hải** | Khoa học dữ liệu | Phân tích Thám cứu Dữ liệu (EDA), Xử lý Khuyết thiếu & Mã hóa |
+| 1 | **Nguyễn Duy Thuận** | Kỹ thuật phần mềm (*Trưởng nhóm – Kiến trúc hệ thống & Backend AI*) | System Architecture, Data Contracts, MockEngine, Backend AI / LLM API Integration & Technical Lead |
+| 2 | **Dương Hoàng Bảo Long** | Kỹ thuật phần mềm (*Fullstack Engineer – Frontend & Backend Integration*) | Backend Core (APIRouter, UploadService), Frontend Streamlit Dashboard, ReportGenerator & E2E Testing |
+| 3 | **Văn Đức Cường** | Trí tuệ nhân tạo (*AI Engineer – Machine Learning*) | Huấn luyện Mô hình Học máy (XGBoost / Random Forest / LightGBM), Tối ưu Siêu tham số & Đánh giá |
+| 4 | **Trần Thị Thu Hiền** | Trí tuệ nhân tạo (*AI Engineer – ML Pipeline & Evaluation*) | Pipeline Tiền xử lý, Đóng gói pipeline.joblib, Benchmark Matrix & Đánh giá Mô hình |
+| 5 | **Trần Ngọc Hải** | Khoa học dữ liệu (*Data Engineer/Scientist – Data Analysis & Feature Engineering*) | Phân tích Thám cứu Dữ liệu (EDA), Xử lý Ngoại lai, Feature Selection & Phân tích Lỗi |
 
 - **Cán bộ hướng dẫn Doanh nghiệp (DTG):** Anh Nguyễn Văn Hải | Anh Nguyễn Minh Huy
 - **Kho tài liệu & Dữ liệu (Drive):** [Google Drive Project Folder](https://drive.google.com/drive/u/0/folders/1HlrreFLtmLEWQMcGSaUQbU43mdl77MT6)
@@ -97,7 +97,7 @@ Dữ liệu đầu vào tiếp nhận 47 trường thông tin theo chuẩn UNSW-
 
 ```text
 DTG_ProjectGroup3/
-├── backend/                  # Dịch vụ API Backend (FastAPI) - Nguyễn Duy Thuận
+├── backend/                  # Dịch vụ API Backend (FastAPI) - Thuận (AI & Schema) & Long (Core API)
 │   ├── app/
 │   │   ├── api/              # Định tuyến endpoints: upload, predict, export
 │   │   ├── core/             # Cấu hình CORS, RateLimit, Logging, Security
@@ -105,7 +105,7 @@ DTG_ProjectGroup3/
 │   │   └── services/         # InferenceService, MockEngine, ReportGenerator
 │   ├── main.py               # Điểm khởi chạy máy chủ FastAPI (Port 8000)
 │   └── requirements.txt      # Thư viện phụ thuộc Backend
-├── frontend/                 # Giao diện Giám sát (Streamlit) - Dương Hoàng Bảo Long
+├── frontend/                 # Giao diện Giám sát (Streamlit) - Dương Hoàng Bảo Long (Mock UI: Thuận)
 │   ├── app.py                # Dashboard chính: Kéo thả file, biểu đồ Plotly
 │   ├── components/           # UploadView, MetricCards, Charts, ExportWidget
 │   └── requirements.txt      # Thư viện phụ thuộc Frontend

@@ -1,4 +1,4 @@
-﻿# TÀI LIỆU THIẾT KẾ HỆ THỐNG PHÁT HIỆN XÂM NHẬP MẠNG (AI-NIDS)
+# TÀI LIỆU THIẾT KẾ HỆ THỐNG PHÁT HIỆN XÂM NHẬP MẠNG (AI-NIDS)
 ## SYSTEM DESIGN SPECIFICATION (IEEE 1016-2009 & C4 MODEL)
 
 ---
@@ -148,11 +148,11 @@ Sơ đồ Component cấp 3 đi sâu vào kiến trúc module nội bộ của t
 | **MetricCards** | Streamlit Frontend | Hiển thị các chỉ số tổng hợp: Tổng số flow, Tỷ lệ Bình thường / Tấn công | Dương Hoàng Bảo Long |
 | **PlotlyDonut** | Streamlit Frontend | Trực quan hóa tỷ lệ phần trăm phân bố nhãn lưu lượng truy cập | Dương Hoàng Bảo Long |
 | **ExportWidget** | Streamlit Frontend | Tùy chọn định dạng và nút tải xuống kết quả (CSV, XLSX, PDF) | Dương Hoàng Bảo Long |
-| **APIRouter** | FastAPI Backend | Định tuyến các endpoint `/health`, `/upload`, `/predict`, `/export` | Nguyễn Duy Thuận |
+| **APIRouter** | FastAPI Backend | Định tuyến các endpoint `/health`, `/upload`, `/predict`, `/export` | Dương Hoàng Bảo Long |
 | **SchemaValidator** | FastAPI Backend | Xác thực 47 đặc trưng đầu vào UNSW-NB15 qua Pydantic Model và tách Ground Truth | Nguyễn Duy Thuận |
 | **InferenceService**| FastAPI Backend | Điều phối nạp pipeline, xử lý dữ liệu và trả kết quả nhãn `predicted_label` + `risk_score` | Nguyễn Duy Thuận |
 | **MockEngine** | FastAPI Backend | Sinh dữ liệu mô phỏng cho phép Frontend kiểm thử độc lập (Sprint 1) | Nguyễn Duy Thuận |
-| **ReportGenerator**| FastAPI Backend | Xây dựng tệp báo cáo Excel định dạng chuyên nghiệp và PDF tóm tắt | Nguyễn Duy Thuận |
+| **ReportGenerator**| FastAPI Backend | Xây dựng tệp báo cáo Excel định dạng chuyên nghiệp và PDF tóm tắt | Dương Hoàng Bảo Long |
 | **Imputer** | ML Component | Xử lý các giá trị khuyết thiếu (missing values) bằng median/constant | Trần Ngọc Hải |
 | **OneHotEncoder** | ML Component | Mã hóa các trường phân loại (`proto`, `service`, `state`) | Trần Ngọc Hải |
 | **StandardScaler** | ML Component | Chuẩn hóa thang đo các đặc trưng số thực (Z-Score scaling) | Trần Thị Thu Hiền |
