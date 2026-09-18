@@ -236,7 +236,9 @@ stateDiagram-v2
 ## 9. ĐẶC TẢ GIAO DIỆN VÀ HỢP ĐỒNG DỮ LIỆU (DATA CONTRACTS & REST API)
 
 ### 9.1. Hợp đồng dữ liệu đầu vào (Input Data Contract - UNSW-NB15)
-Bộ dữ liệu sử dụng trong dự án gồm 49 trường thông tin theo data contract của hệ thống, bao gồm 46 đặc trưng mạng thực tế, 1 trường định danh `id` và 2 trường Ground Truth là `label`, `attack_cat`:
+Bộ dữ liệu sử dụng trong dự án gồm 49 trường thông tin: 47 trường đầu vào theo schema, trong đó `id` chỉ dùng để định danh bản ghi và bị loại khỏi không gian đặc trưng của mô hình; cùng 2 trường Ground Truth là `label` và `attack_cat`.
+
+Số đặc trưng mạng thực tế được nạp vào mô hình là 46, sau khi loại bỏ trường `id`.
 
 #### A. Phân hệ Đặc trưng Đầu vào phục vụ Suy luận (Inference Input Features):
 - **Trường định danh bản ghi (`id`):** Được giữ trong schema Pydantic để định danh từng dòng dữ liệu và liên kết kết quả hiển thị trên bảng điều khiển, nhưng **hoàn toàn bị loại bỏ khỏi không gian đặc trưng (Feature Space) của mô hình** nhằm triệt tiêu nguy cơ rò rỉ dữ liệu (Data Leakage).
