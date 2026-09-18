@@ -14,7 +14,7 @@
 - **Trần Ngọc Hải** – Khoa học dữ liệu (Phân tích Dữ liệu & Kỹ thuật đặc trưng)  
 
 **Cán bộ hướng dẫn (DTG):** Anh Nguyễn Văn Hải | Anh Nguyễn Minh Huy  
-**Bộ dữ liệu chuẩn hóa:** UNSW-NB15 Dataset (Kaggle: dhoogla/unswnb15, 49 trường thông tin)  
+**Bộ dữ liệu chuẩn hóa:** UNSW-NB15 Dataset (Kaggle: dhoogla/unswnb15, 49 trường thông tin: 47 features + 2 ground truth)  
 **Kho mã nguồn (GitHub):** https://github.com/VNDT1625/DTG_ProjectGroup3  
 **Kho tài liệu & Dữ liệu (Drive):** https://drive.google.com/drive/u/0/folders/1HlrreFLtmLEWQMcGSaUQbU43mdl77MT6  
 **Phiên bản tài liệu:** 2.2 (Tháng 09/2026 - Bản hoàn thiện xuất bản chính thức)  
@@ -236,7 +236,7 @@ stateDiagram-v2
 ## 9. ĐẶC TẢ GIAO DIỆN VÀ HỢP ĐỒNG DỮ LIỆU (DATA CONTRACTS & REST API)
 
 ### 9.1. Hợp đồng dữ liệu đầu vào (Input Data Contract - UNSW-NB15)
-Bộ dữ liệu chuẩn hóa UNSW-NB15 (Kaggle: dhoogla/unswnb15) có tối đa 49 trường thông tin, được phân tách rõ ràng thành hai phân hệ:
+Bộ dữ liệu sử dụng trong dự án gồm 49 trường thông tin theo data contract của hệ thống, bao gồm 46 đặc trưng mạng thực tế, 1 trường định danh `id` và 2 trường Ground Truth là `label`, `attack_cat`:
 
 #### A. Phân hệ Đặc trưng Đầu vào phục vụ Suy luận (Inference Input Features):
 - **Trường định danh bản ghi (`id`):** Được giữ trong schema Pydantic để định danh từng dòng dữ liệu và liên kết kết quả hiển thị trên bảng điều khiển, nhưng **hoàn toàn bị loại bỏ khỏi không gian đặc trưng (Feature Space) của mô hình** nhằm triệt tiêu nguy cơ rò rỉ dữ liệu (Data Leakage).
